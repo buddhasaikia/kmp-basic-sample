@@ -24,7 +24,6 @@ import com.jetbrains.basicsample.greet
 
 @Composable
 fun CalculatorScreen(
-    modifier: Modifier = Modifier,
     sum: Int = 0,
     onCalculate: (Int, Int) -> Unit
 ) {
