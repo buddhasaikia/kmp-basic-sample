@@ -4,6 +4,7 @@ import SwiftUI
 struct ContentView: View {
     let calculator = Calculator.Companion()
     let greet = Greeting().greeting()
+    let todaysDate = KmmDateKt.getToday()
     
     @State private var firstNum: String = "0"
     @State private var secondNum: String = "0"
@@ -17,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            Text(greet)
+            Text("\(greet) \n\(todaysDate)")
             HStack(alignment: .center) {
                 TextField("A", text: $firstNum)
                     .keyboardType(.numberPad)

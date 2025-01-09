@@ -20,6 +20,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.text.isDigitsOnly
+import com.jetbrains.basicsample.getToday
 import com.jetbrains.basicsample.greet
 
 @Composable
@@ -34,7 +35,7 @@ fun CalculatorScreen(
         Column(
             horizontalAlignment = Alignment.Start,
         ) {
-            Text(greet(), Modifier.padding(8.dp))
+            Text("${greet()}. \n\nToday is ${getToday()}", Modifier.padding(8.dp))
 
             var firstNumber by rememberSaveable { mutableStateOf("") }
             var secondNumber by rememberSaveable { mutableStateOf("") }
